@@ -1,0 +1,123 @@
+$cdn : "https://storage.neptunecs.com/sites/neptunedashboard/assets";
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,900&display=swap');
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+*::before,
+*::after {
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+h1, h2, h3, h4,
+h5, h6, p,
+ol, ul,
+figure,
+.table,
+.form-row {
+  margin: 0;
+}
+
+@import "./colors";
+@import "./navigation";
+
+//layouts
+@import "./layouts/auth";
+@import "./layouts/dashboard";
+
+//partials
+@import "./patials/bgvideo";
+@import "./patials/globalloader";
+@import "./patials/services";
+
+.body-centered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.center-form{
+    margin: auto;
+    width: 500px;
+    height: 300px;
+    z-index: 200;
+    position: relative;
+    border-radius: 20px;
+    flex-direction: column;
+    padding: 20px;
+
+    .overlay-dark{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: .95;
+        z-index: 250;
+        border-radius: 20px;
+    }
+
+    .btn{
+        z-index: 300;
+    }
+}
+
+//buttons
+.btn{
+    border-radius: 20px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    background: transparent;
+}
+
+.btn.disabled{
+    cursor: not-allowed;
+}
+
+.btn-xl{
+    width: 90%;
+    margin: 10px auto;
+    height: 56px;
+    font-size: 22px;
+}
+
+//helpers
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden{
+  display: none;
+}
+
+.flex-col{
+  flex-direction: column;
+}

@@ -1,0 +1,59 @@
+.dashboard-body{
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.main-aside{
+    width: 20%;
+    min-width: 370px;
+    height: 100%;
+    color: white;
+    position: relative;
+
+    video{
+        object-fit: cover;
+    }
+
+    .bg-overlay, .bg-video{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .side-content{
+        z-index: 500;
+        position: relative;
+    }
+
+    .bg-overlay{
+        z-index: 300;
+        opacity: .75;
+    }
+    
+    .bg-video{
+        // width: 100%;
+        min-width: 100%; 
+        min-height: 100%;
+        width:100%;
+        max-width:unset;
+        max-height:unset;
+        z-index: 100;
+    }
+}
+
+.main-content{
+    flex: 1;
+}
+
+.side-content{
+
+    padding: 0 15px;
+
+    .logo{
+        font-size: 40px;
+        margin: 30px auto 120px;
+    }
+}

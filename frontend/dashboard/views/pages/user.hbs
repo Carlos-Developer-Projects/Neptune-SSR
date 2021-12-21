@@ -1,0 +1,58 @@
+{{> global/loader }}
+
+<div class="services-wrapper">
+
+    <section id="services-slides" class="services-slides">
+
+        <div id="slide-binders" class="service-slide">
+            <div class="services-overlay bg-gradient"></div>
+            <div class="slide-content flex-center flex-col">
+                {{> global/binderlogo }}
+                <h2>Neptune Binders</h2>
+                <p>An augmented reality NFT organizer and viewer.</p>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"></script>
+<script>
+    let twitchmemory = window.localStorage.getItem("twitch");
+
+    //Validate the user
+    //Return the user dashboard items
+    async function sendMemory(memory){
+        const {data : response} = await axios.post('/twitch/dashboard', memory);
+
+        if(response.content){
+            console.log("valid");
+
+            //remove the loader when ready
+            const loader = document.querySelector(".global-loader");
+
+            if(loader){
+                loader.classList.add("hidden");
+            }
+            
+
+        }else{
+            window.location.href = "/auth";
+        }
+
+    };
+
+    if(twitchmemory){
+        twitchmemory = JSON.parse(twitchmemory);
+
+        //send request to validation endpoint
+        sendMemory(twitchmemory);
+
+    }else{
+        window.location.href = "/auth";
+    }
+
+</script>

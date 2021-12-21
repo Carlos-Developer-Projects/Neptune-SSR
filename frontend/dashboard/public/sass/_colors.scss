@@ -1,0 +1,34 @@
+$main: #6f0000;
+$dark: #200122;
+$twitch: #6441A4;
+$discord: #7289DA;
+
+.bg-gradient{
+    background: #200122;
+    background: -webkit-linear-gradient(to bottom, #200122, #6f0000);
+    background: linear-gradient(to bottom, #200122, #6f0000);
+}
+
+.bg-main{
+    background-color: $main;
+}
+
+.bg-dark{
+    background-color: $dark;
+}
+
+.bg-twitch{
+    background-color: $twitch !important;
+}
+
+.bg-discord{
+    background-color: $discord !important;
+}
+
+.border-twitch{
+    border: 2px solid $twitch;
+}
+
+.border-discord{
+    border: 2px solid $discord;
+}

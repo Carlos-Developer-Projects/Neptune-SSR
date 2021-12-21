@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Neptune | Dashboard</title>
+
+        <!--Main Styles -->
+        <link rel="stylesheet" href="{{{assets}}}/css/main.min.css?v={{{version}}}">
+
+    </head>
+    <body class="dashboard-body">
+        <aside id="sidenav" class="main-aside bg-gradient">
+
+            <video autoplay muted loop class="bg-video">
+                <source src="{{{cdn}}}/videos/bg-compressed.mp4" type="video/mp4">
+            </video>
+
+            <div class="bg-overlay bg-gradient"></div>
+
+            <div class="side-content">
+                <p class="logo">Logo</p>
+
+                <nav>
+                    <ul class="sidenav-nav">
+                        <li><a href="/user">Dashboard</a></li>
+                        <li><a href="/binders">My Binders</a></li>
+                        <li><a href="/user/settings">Settings</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <main class="main-content bg-gradient">
+            <div class="content">{{{body}}}</div>
+            {{!-- <footer id="main-footer">&copy; 2021 Neptune Chain Services</footer> --}}
+        </main>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+
+.sidenav-nav{
+    li, a{
+        font-size: 20px;
+        color: white;
+    }
+
+    li{
+        border-bottom: 2px solid $main;
+        padding-bottom: 9px;
+        margin-bottom: 26px;
+        background-color: rgba(0,0,0,.15);
+        display: block;
+        height: 50px;
+        padding: 1px 10px 4px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        transition: .25s all;
+    }
+
+    a{
+        width: 100%;
+        display: block;
+        font-weight: 400;
+        height: 50px;
+        cursor: pointer;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+
+    li:hover{
+        background-color: rgba(0,0,0, .56);
+    }
+
+    
+}

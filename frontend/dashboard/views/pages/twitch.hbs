@@ -1,0 +1,30 @@
+{{> global/loader }}
+<script>
+    const localState = window.sessionStorage.getItem("state");
+    let params = new URLSearchParams(window.location.search);
+    const token = params.get('code');
+    const state = params.get('state');
+
+    async function fetchToken(url){
+        const response = await fetch(url);
+        const format = await response.json();
+        if(format.status && format.status === "error"){
+            console.log("An error has occured");
+            setTimeout(function(){
+                window.location.href = "/auth";
+            },1000)
+        }else{
+            window.localStorage.setItem("twitch", JSON.stringify(format));
+            console.log("user found and saved");
+            window.location.href = "/user";
+        }
+    }
+
+    if(localState === state){
+        const fetchUrl = `/twitch/user?code=${token}`;
+        fetchToken(fetchUrl);
+    }else{
+        window.location.href = "/auth";
+    }   
+
+</script>

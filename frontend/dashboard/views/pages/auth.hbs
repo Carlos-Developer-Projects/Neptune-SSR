@@ -1,0 +1,30 @@
+{{> global/loader }}
+{{> auth/signin }}
+<script>
+
+    //remove loader
+    window.addEventListener("load", function(){
+        const loader = document.querySelector(".global-loader");
+        if(loader){
+            loader.classList.add("hidden");
+        }
+    })
+
+    //prepare twitch
+    const state = "{{{state}}}";
+
+    let twitchLink = document.getElementById("twitch-button");
+    window.sessionStorage.setItem("state", state);
+
+    const clientID = "{{{client}}}";
+    const redirectClient = "{{{redirect}}}";
+
+    console.log(redirectClient);
+    
+    twitchLink.addEventListener("click", function(e){
+        e.preventDefault();
+        window.location.href = `https://id.twitch.tv/oauth2/authorize?client_id=${clientID}&redirect_uri=${redirectClient}&response_type=code&scope=user:read:email&state=${state}`;
+    });
+
+
+</script>

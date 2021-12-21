@@ -1,0 +1,24 @@
+{
+    "list":[
+        {
+            "name":"main.min.css",
+            "upload": true,
+            "location": "public/css/main.min.css",
+            "key": "sites/neptunedashboard/css/",
+            "bucket": "projects.carlos-developer.com",
+            "cache": true,
+            "cloudfrontID": "E28DNO4I53PN65",
+            "type":"text/css"
+        },
+        {
+            "name":"main.min.css.map",
+            "upload": true,
+            "location": "public/css/main.min.css.map",
+            "key": "sites/neptunedashboard/css/",
+            "bucket": "projects.carlos-developer.com",
+            "cache": true,
+            "cloudfrontID": "E28DNO4I53PN65",
+            "type":"application/json"
+        }
+    ]
+}
