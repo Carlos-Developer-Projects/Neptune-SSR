@@ -1,0 +1,70 @@
+.editors{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-nav{
+    width: 100%;
+    background-color: black;
+    height: 90px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 20px;
+    align-items: center;
+    color: white;
+}
+
+.btn-edit{
+    font-size: 20px;
+    margin-left: 15px;
+    border: 1px solid white;
+    padding: 0 20px;
+}
+
+.center-region{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.region-active{
+    width: 90%;
+    margin: 30px auto;
+    position: relative;
+    height: 700px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.region-active::-webkit-scrollbar {
+    width: 18px;
+    border-radius: 20px;
+}
+
+.region-active::-webkit-scrollbar-thumb {
+    background: $main;
+}
+
+.region-active::-webkit-scrollbar-track {
+    background: $dark;
+}
+
+.region-active-overlay{
+    background-color: black;
+    opacity: .55;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px 0 0 20px;
+    z-index: 200;
+}
+
+.region-form{
+    z-index: 400;
+    position: relative;
+}

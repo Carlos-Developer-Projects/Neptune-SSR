@@ -11,6 +11,26 @@
     color: white;
     position: relative;
 
+    .side-logo{
+        font-size: 34px;
+        text-transform: uppercase;
+        text-align: center;
+        color: white;
+        font-weight: bolder;
+        margin-bottom: 60px;
+        display: block;
+    }
+
+    svg{
+        width: 35%;
+        display: block;
+        margin: 30px auto 20px;
+    }
+
+    svg g, svg path{
+        fill:white;
+    }
+
     video{
         object-fit: cover;
     }
@@ -57,3 +77,4 @@
         margin: 30px auto 120px;
     }
 }
+

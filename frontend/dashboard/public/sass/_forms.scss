@@ -1,0 +1,29 @@
+.form{
+    padding: 30px;
+}
+
+.form-row{
+
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    color: white;
+
+    label{
+        font-size: 26px;
+        margin-bottom: 12px;
+        font-weight: lighter;
+    }
+
+    input[type="text"]{
+        height: 40px;
+        padding: 0 20px;
+        font-size: 22px;
+        background: transparent;
+        border-bottom: 2px solid $main;
+        color: white;
+        font-weight: lighter;
+    }
+}

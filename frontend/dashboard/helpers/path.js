@@ -7,7 +7,7 @@ exports.envPath = function(host){
         return correctpath;
     }
 
-    if(host.includes('kurngh3xqc')){
+    if(host.includes('kurngh3xqc') || host.includes('preview-dashboard')){
         correctpath = `.env.dev`;
         return correctpath;
     }

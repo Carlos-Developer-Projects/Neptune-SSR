@@ -1,6 +1,5 @@
 $cdn : "https://storage.neptunecs.com/sites/neptunedashboard/assets";
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,900&display=swap');
 *,
 *::before,
 *::after {
@@ -9,7 +8,7 @@ $cdn : "https://storage.neptunecs.com/sites/neptunedashboard/assets";
   border: none;
   outline: none;
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
 }
 *::before,
 *::after {
@@ -41,15 +40,17 @@ figure,
 
 @import "./colors";
 @import "./navigation";
+@import "./forms";
 
 //layouts
 @import "./layouts/auth";
 @import "./layouts/dashboard";
 
 //partials
-@import "./patials/bgvideo";
-@import "./patials/globalloader";
-@import "./patials/services";
+@import "./partials/bgvideo";
+@import "./partials/globalloader";
+@import "./partials/services";
+@import "./partials/editors";
 
 .body-centered{
     display: flex;

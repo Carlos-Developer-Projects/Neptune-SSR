@@ -20,8 +20,8 @@ app.set('view engine', '.hbs');
 app.set("views", path.resolve(__dirname, "./views"));
 
 //routes
-const { routes: binderRoutes } = require('./routes/binder');
-app.use('/binder', binderRoutes);
+const { routes: bindersRoutes } = require('./routes/binders');
+app.use('/binders', bindersRoutes);
 
 const { routes: userRoutes } = require('./routes/user');
 app.use('/user', userRoutes);
